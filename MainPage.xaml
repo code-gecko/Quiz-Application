@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="QuizApplication.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QuizApplication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="LightBlue" Grid.Row="0" >
+            <TextBlock Text="Welcome to Quiz Application"
+                       FontSize="30"
+                       FontFamily="Garamond"
+                       HorizontalAlignment="Center"
+                       Margin="15"/>
+        </Border>
+        <StackPanel Orientation="Vertical" Margin="10,30,0,0" Grid.Row="1">
+            <TextBlock x:Name="txtQuestiontext"
+                       Text="QuestionTextPlaceholder"
+                       FontSize="35"
+                       FontWeight="Bold"/>
+            <RadioButton Content="Option A" 
+                          x:Name="radiooptiona"
+                         Margin="30,0,0,0"
+                         FontSize="25"/>
+            <RadioButton Content="Option B" 
+                          x:Name="radiooptionb"
+                         Margin="30,0,0,0"
+                         FontSize="25"/>
+            <RadioButton Content="Option C" 
+                          x:Name="radiooptionc"
+                         Margin="30,0,0,0"
+                         FontSize="25"/>
+            <RadioButton Content="Option D" 
+                          x:Name="radiooptiond"
+                         Margin="30,0,0,0"
+                         FontSize="25"/>
+            <Button Name="btnSubmit"
+                    Content="Submit"
+                    Padding="30"
+                    HorizontalAlignment="Center"
+                    Background="LightGray" Click="btnSubmit_Click"/>
+            <TextBlock Text="Score: 0"
+                       Name="txtScore"
+                       Margin="0,12,0,0"
+                       FontSize="25"
+                       TextAlignment="Center"
+                       FontWeight="Bold"/>
+            <TextBlock Text="Answers will be here"
+                       Name="txtText"
+                       Margin="0,12,0,0"
+                       FontSize="25"
+                       TextAlignment="Center"
+                       FontWeight="Bold"/>
+            <TextBlock Text="Timer"
+                       Name="txtTimer"
+                       Margin="0,12,0,0"
+                       FontSize="25"
+                       TextAlignment="Center"
+                       FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Page>
